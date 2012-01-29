@@ -18,7 +18,6 @@ public class Animation
 		this.loop = loop;
 		addi = 1;
 		frames = new PImage[keyframes.length];
-		int offset = width;
 
 		int x_frames = image.width / width;
 
@@ -26,7 +25,6 @@ public class Animation
 		{
 			int yy = keyframes[i] / x_frames;
 			int xx = (keyframes[i] % x_frames);
-			System.out.println(yy + " - " + xx);
 			frames[i] = Main.p.createGraphics(width, height, PConstants.P3D);
 			for (int y = 0; y < height; y++)
 			{
@@ -34,7 +32,7 @@ public class Animation
 				{
 					int loc = x + y * width;
 					int loc2 = x + y * image.width;
-					frames[i].pixels[loc] = image.pixels[loc2+(width * height * yy * x_frames + width * xx)];
+					frames[i].pixels[loc] = image.pixels[loc2 + (width * height * yy * x_frames + width * xx)];
 				}
 			}
 		}

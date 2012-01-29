@@ -25,11 +25,11 @@ public class Actor implements Comparable<Actor>
 
 	public void draw()
 	{
-		Main.p.image(tree.play("attack"), 190, 190);
-		Main.p.image(tree.play("walking"), 290, 290);
-		Main.p.image(tree.play("running"), 390, 290);
-		Main.p.image(tree.play("standing"), 90, 90);
-		Main.p.image(tree.play("roll"), 0, 0);
+		Main.p.image(tree.play("walking"), 0, 0);
+		Main.p.image(tree.play("running"), 80, 0);
+		Main.p.image(tree.play("attack"), 160, 0);
+		Main.p.image(tree.play("standing"), 240, 0);
+		Main.p.image(tree.play("roll"), 320, 0);
 	}
 
 	@Override
