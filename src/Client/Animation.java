@@ -1,5 +1,6 @@
 package Client;
 
+
 import Server.Main;
 import processing.core.PConstants;
 import processing.core.PImage;
@@ -42,22 +43,20 @@ public class Animation
 	public void tick()
 	{
 		frameNumber += addi;
-		if (frameNumber == frames.length - 1)
+		if (loop)
 		{
-			if (loop)
+			if (frameNumber == frames.length - 1 || frameNumber == 0)
 			{
 				addi *= -1;
-			} else
+			}
+		} else
+		{
+			if (frameNumber == frames.length)
 			{
 				frameNumber = 0;
 			}
-		} else if (frameNumber == 0)
-		{
-			if (loop)
-			{
-				addi *= -1;
-			}
 		}
+
 		// System.out.println( frameNumber);
 	}
 

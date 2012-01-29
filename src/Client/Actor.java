@@ -18,7 +18,7 @@ public class Actor implements Comparable<Actor>
 		tree = new AnimationTree();
 		b = Main.p.loadImage("sprite/" + name + ".png");
 		tree.add("standing"		, new Animation(b, new int[] { 0, 1, 2, 3 }						, 80, 80, true));
-		tree.add("roll"			, new Animation(b, new int[] { 59, 58, 69, 4 }					, 80, 80, false));
+		tree.add("roll"			, new Animation(b, new int[] { 59, 58, 69}						, 80, 80, false));
 		tree.add("walking"		, new Animation(b, new int[] { 4, 5, 6, 7 }						, 80, 80, true));
 		tree.add("running"		, new Animation(b, new int[] { 20, 21, 22 }						, 80, 80, true));
 		tree.add("punch"		, new Animation(b, new int[] { 10, 11, 12, 13, 14, 15, 16, 17 }	, 80, 80, false));
