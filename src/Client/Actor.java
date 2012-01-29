@@ -20,16 +20,19 @@ public class Actor implements Comparable<Actor>
 		tree.add("roll", new Animation(b, new int[] { 59, 58, 69, 4 }, 80, 80, false));
 		tree.add("walking", new Animation(b, new int[] { 4, 5, 6, 7 }, 80, 80, true));
 		tree.add("running", new Animation(b, new int[] { 20, 21, 22 }, 80, 80, true));
-		tree.add("attack", new Animation(b, new int[] { 8, 9, 19, 29, 39, 49 }, 80, 80, false));
+		tree.add("punch", new Animation(b, new int[] { 10, 11, 12, 13, 14, 15, 16, 17 }, 80, 80, false));
+		tree.add("super_punch", new Animation(b, new int[] { 8, 9, 19, 29, 39, 49 }, 80, 80, false));
+
 	}
 
 	public void draw()
 	{
-		Main.p.image(tree.play("walking"), 0, 0);
-		Main.p.image(tree.play("running"), 80, 0);
-		Main.p.image(tree.play("attack"), 160, 0);
-		Main.p.image(tree.play("standing"), 240, 0);
-		Main.p.image(tree.play("roll"), 320, 0);
+		Main.p.image(tree.play("standing"), 80 * 0, 0);
+		Main.p.image(tree.play("walking"), 80 * 1, 0);
+		Main.p.image(tree.play("running"), 80 * 2, 0);
+		Main.p.image(tree.play("punch"), 80 * 3, 0);
+		Main.p.image(tree.play("super_punch"), 80 * 4, 0);
+		Main.p.image(tree.play("roll"), 80 * 5, 0);
 	}
 
 	@Override
