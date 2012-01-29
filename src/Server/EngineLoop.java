@@ -7,13 +7,12 @@ class EngineLoop extends Thread
 	
 	public void run()
 	{
-		int d = 1000 / 7;
 		while (true)
 		{
 			try
 			{
 				Main.tick();
-				sleep(d);
+				sleep(Main.sleep);
 			} catch (InterruptedException e)
 			{
 				System.out.println( "fehrer");
