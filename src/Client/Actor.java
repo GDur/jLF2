@@ -22,7 +22,6 @@ public class Actor implements Comparable<Actor>
 		tree.add("running"		, new Animation(b, new int[] { 20, 21, 22 }						, 80, 80, true));
 		tree.add("punch"		, new Animation(b, new int[] { 10, 11, 12, 13, 14, 15, 16, 17 }	, 80, 80, false));
 		tree.add("super_punch"	, new Animation(b, new int[] { 8, 9, 19, 29, 39, 49 }			, 80, 80, false));
-
 	}
 
 	public void draw()
