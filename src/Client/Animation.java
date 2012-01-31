@@ -42,6 +42,7 @@ public class Animation
 
 	public void tick()
 	{
+		
 		frameNumber += addi;
 		if (loop)
 		{

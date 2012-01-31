@@ -6,15 +6,15 @@ public class Pawn extends Actor
 {
 
 	protected int z_value;
-	PImage b;
 
 	public Pawn(String Pic)
 	{
 		super(Pic);
 	}
 
-	public void draw()
+	public PImage draw()
 	{
+		return null;
 	}
 
 }

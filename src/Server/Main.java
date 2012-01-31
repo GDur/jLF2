@@ -16,6 +16,7 @@ public class Main extends PApplet
 	public void setup()
 	{
 		size(800, 600);
+
 		frameRate(30);
 		smooth();
 		demoThread = new EngineLoop();
@@ -30,8 +31,26 @@ public class Main extends PApplet
 		background(255);
 		for (Actor a : actors)
 		{
-			a.draw();
+			image(a.draw(), 80 * 0, 0);
+			/*
+			 * Main.p.image(tree.play("walking") , 80 * 1, 0);
+			 * Main.p.image(tree.play("running") , 80 * 2, 0);
+			 * Main.p.image(tree.play("punch") , 80 * 3, 0);
+			 * Main.p.image(tree.play("super_punch") , 80 * 4, 0);
+			 * Main.p.image(tree.play("roll") , 80 * 5, 0);
+			 */
+			// a.draw();
 		}
+	}
+
+	public void keyPressed()
+	{
+		KeyComboChecker.pressed(keyCode);
+	}
+
+	public void keyReleased()
+	{
+		KeyComboChecker.released(keyCode);
 	}
 
 	public static void tick()
