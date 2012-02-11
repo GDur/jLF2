@@ -14,7 +14,7 @@ public class Actor implements Comparable<Actor>
 	public Actor(String name)
 	{
 		// FIXME formatter off
-		action = "walking";
+		action = "running";
 		b = Main.p.loadImage("sprite/" + name + ".png");
 		tree = new AnimationTree();
 		tree.add("standing"		, new Animation(b, new int[] { 0, 1, 2, 3 }						, 80, 80, true	));
