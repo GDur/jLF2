@@ -32,6 +32,8 @@ public class Actor implements Comparable<Actor>
 
 	public void setAction(String action)
 	{
+		if(action==null)
+			return;
 		this.action = action;
 	}
 

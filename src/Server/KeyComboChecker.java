@@ -5,28 +5,27 @@ public class KeyComboChecker
 
 	public static void pressed(int keyCode)
 	{
-		// TODO Auto-generated method stub
+		Server.Main.actors.peek().setAction(codeAction(keyCode));
+	}
+
+	private static String codeAction(int keyCode) {
 		switch (keyCode)
 		// tasten : q,w,e,a,s,d
 		{
 		case 81:
-			Server.Main.actors.peek().setAction("standing");
-			break;
+			return "standing";
 		case 87:
-			Server.Main.actors.peek().setAction("roll");
-			break;
+			return "roll";
 		case 69:
-			Server.Main.actors.peek().setAction("walking");
-			break;
+			return "walking";
 		case 65:
-			Server.Main.actors.peek().setAction("running");
-			break;
+			return "running";
 		case 83:
-			Server.Main.actors.peek().setAction("punch");
-			break;
+			return "punch";
 		case 68:
-			Server.Main.actors.peek().setAction("super_punch");
-			break;
+			return "super_punch";
+		default:
+			return "";
 		}
 	}
 
