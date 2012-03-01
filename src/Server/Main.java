@@ -31,7 +31,9 @@ public class Main extends PApplet
 		background(255);
 		for (Actor a : actors)
 		{
-			image(a.draw(), 80 * 0, 0);
+
+			//flip across x axis
+			image(a.draw(),- 80 * 1,  80 * 1);
 			/*
 			 * Main.p.image(tree.play("walking") , 80 * 1, 0);
 			 * Main.p.image(tree.play("running") , 80 * 2, 0);
