@@ -25,7 +25,7 @@ public class KeyComboChecker
 		case 68:
 			return "super_punch";
 		default:
-			return "";
+			return null;
 		}
 	}
 
