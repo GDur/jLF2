@@ -3,6 +3,7 @@ package Server;
 import java.util.PriorityQueue;
 
 import processing.core.PApplet;
+import processing.core.PImage;
 import Client.Actor;
 
 @SuppressWarnings("serial")
@@ -13,12 +14,15 @@ public class Main extends PApplet
 	public static final int sleep = 1000 / 7;
 	EngineLoop demoThread;
 
+	protected PImage bg;
+
 	public void setup()
 	{
 		size(800, 600);
 
 		frameRate(30);
 		smooth();
+		bg = loadImage("sprite/hk_collusseum.png");
 		demoThread = new EngineLoop();
 		demoThread.start();
 		p = this;
@@ -27,13 +31,14 @@ public class Main extends PApplet
 
 	public void draw()
 	{
-		 System.out.println( "draw");
+		// System.out.println( "draw");
 		background(255);
+		image(bg, 0, 0);
 		for (Actor a : actors)
 		{
 
-			//flip across x axis
-			image(a.draw(), 80 * 1,  80 * 1);
+			// flip across x axis
+			image(a.draw(), 80 * 1, 80 * 1);
 			/*
 			 * Main.p.image(tree.play("walking") , 80 * 1, 0);
 			 * Main.p.image(tree.play("running") , 80 * 2, 0);
